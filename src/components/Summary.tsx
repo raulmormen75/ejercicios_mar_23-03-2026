@@ -1,4 +1,5 @@
-import { Pi } from './MathUI';
+import { InlineMath } from 'react-katex';
+import 'katex/dist/katex.min.css';
 
 export const Summary = () => {
   return (
@@ -10,48 +11,48 @@ export const Summary = () => {
         <div style={{ padding: '1.5rem', backgroundColor: 'var(--color-bg-card)', borderRadius: '8px', borderTop: '4px solid var(--color-accent-gold)' }}>
           <h3 style={{ color: 'var(--color-accent-gold)', marginTop: 0 }}>1) Ejercicio 1</h3>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontFamily: 'Merriweather', fontSize: '1.1rem' }}>
-            <li>q<sub>1</sub>* = 57.875</li>
-            <li>q<sub>2</sub>* = 16.75</li>
-            <li>Q* = 74.625</li>
-            <li>P* ≈ 21.5357</li>
-            <li><Pi sub="1"/>* ≈ 957.0045</li>
-            <li><Pi sub="2"/>* ≈ 220.4420</li>
+            <li><InlineMath math={`q_1^* = 57.875`} /></li>
+            <li><InlineMath math={`q_2^* = 16.75`} /></li>
+            <li><InlineMath math={`Q^* = 74.625`} /></li>
+            <li><InlineMath math={`P^* \approx 21.5357`} /></li>
+            <li><InlineMath math={`\pi_1^* \approx 957.0045`} /></li>
+            <li><InlineMath math={`\pi_2^* \approx 220.4420`} /></li>
           </ul>
         </div>
         {/* Ejercicio 2 */}
         <div style={{ padding: '1.5rem', backgroundColor: 'var(--color-bg-card)', borderRadius: '8px', borderTop: '4px solid var(--color-accent-gold)' }}>
           <h3 style={{ color: 'var(--color-accent-gold)', marginTop: 0 }}>2) Ejercicio 2</h3>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontFamily: 'Merriweather', fontSize: '1.1rem' }}>
-            <li>q<sub>1</sub>* ≈ 33.6296</li>
-            <li>q<sub>2</sub>* ≈ 20.7407</li>
-            <li>Q* ≈ 54.3704</li>
-            <li>P* ≈ 15.2099</li>
-            <li><Pi sub="1"/>* ≈ 376.9840</li>
-            <li><Pi sub="2"/>* ≈ 229.4284</li>
+            <li><InlineMath math={`q_1^* \approx 33.6296`} /></li>
+            <li><InlineMath math={`q_2^* \approx 20.7407`} /></li>
+            <li><InlineMath math={`Q^* \approx 54.3704`} /></li>
+            <li><InlineMath math={`P^* \approx 15.2099`} /></li>
+            <li><InlineMath math={`\pi_1^* \approx 376.9840`} /></li>
+            <li><InlineMath math={`\pi_2^* \approx 229.4284`} /></li>
           </ul>
         </div>
         {/* Ejercicio 3 */}
         <div style={{ padding: '1.5rem', backgroundColor: 'var(--color-bg-card)', borderRadius: '8px', borderTop: '4px solid var(--color-accent-gold)' }}>
           <h3 style={{ color: 'var(--color-accent-gold)', marginTop: 0 }}>3) Ejercicio 3</h3>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontFamily: 'Merriweather', fontSize: '1.1rem' }}>
-            <li>q<sub>1</sub>* = 52.075</li>
-            <li>q<sub>2</sub>* = 12.35</li>
-            <li>Q* = 64.425</li>
-            <li>P* = 111.15</li>
-            <li><Pi sub="1"/>* = 5423.61125</li>
-            <li><Pi sub="2"/>* = 838.87375</li>
+            <li><InlineMath math={`q_1^* = 52.075`} /></li>
+            <li><InlineMath math={`q_2^* = 12.35`} /></li>
+            <li><InlineMath math={`Q^* = 64.425`} /></li>
+            <li><InlineMath math={`P^* = 111.15`} /></li>
+            <li><InlineMath math={`\pi_1^* = 5423.61125`} /></li>
+            <li><InlineMath math={`\pi_2^* = 838.87375`} /></li>
           </ul>
         </div>
         {/* Ejercicio 4 */}
         <div style={{ padding: '1.5rem', backgroundColor: 'var(--color-bg-card)', borderRadius: '8px', borderTop: '4px solid var(--color-accent-gold)' }}>
           <h3 style={{ color: 'var(--color-accent-gold)', marginTop: 0 }}>4.) Ejercicio 4</h3>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontFamily: 'Merriweather', fontSize: '1.1rem' }}>
-            <li>q<sub>1</sub>* ≈ 22.1290</li>
-            <li>q<sub>2</sub>* ≈ 1.7419</li>
-            <li>Q* ≈ 23.8710</li>
-            <li>P* ≈ 13.0645</li>
-            <li><Pi sub="1"/>* ≈ 244.8470</li>
-            <li><Pi sub="2"/>* ≈ 12.1374</li>
+            <li><InlineMath math={`q_1^* \approx 22.1290`} /></li>
+            <li><InlineMath math={`q_2^* \approx 1.7419`} /></li>
+            <li><InlineMath math={`Q^* \approx 23.8710`} /></li>
+            <li><InlineMath math={`P^* \approx 13.0645`} /></li>
+            <li><InlineMath math={`\pi_1^* \approx 244.8470`} /></li>
+            <li><InlineMath math={`\pi_2^* \approx 12.1374`} /></li>
           </ul>
         </div>
       </div>

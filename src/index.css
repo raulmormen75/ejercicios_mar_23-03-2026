@@ -43,23 +43,22 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 1rem;
 }
 
-/* Base utility classes for equations and fractions */
-.math-block {
-  font-family: 'Merriweather', serif;
+/* Styling KaTeX blocks to look like premium math cards */
+.katex-display {
   background-color: var(--color-bg-card);
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 8px;
   border-left: 4px solid var(--color-accent-red);
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   overflow-x: auto;
-  font-size: 1.1rem;
+  font-size: 1.25rem !important;
+  color: var(--color-accent-gold);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.math-inline {
+.katex {
   font-family: 'Merriweather', serif;
   color: var(--color-accent-gold);
-  font-size: 1.05em;
-  white-space: nowrap;
 }
 
 .frac {

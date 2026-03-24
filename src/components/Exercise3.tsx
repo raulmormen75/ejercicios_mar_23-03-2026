@@ -1,177 +1,150 @@
 import { Accordion } from './Accordion';
-import { MathBlock, Frac, Pi } from './MathUI';
+import { BlockMath, InlineMath } from 'react-katex';
+import 'katex/dist/katex.min.css';
 
 export const Exercise3 = () => {
   return (
-    <Accordion title="3) Q = 120 - (1/2)P | C₁ = 7q₁ | C₂ = 3.5q₂²" defaultOpen={false}>
+    <Accordion title="3) Q = 120 - (1/2)P | C₁ = 7q₁ | C₂ = 3.5q₂^2" defaultOpen={false}>
       <h3 style={{ marginTop: 0, color: 'var(--color-accent-gold)' }}>Paso 1. Cantidad total</h3>
-      <MathBlock>Q = q<sub>1</sub> + q<sub>2</sub></MathBlock>
+      <BlockMath math={`Q = q_1 + q_2`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 2. Demanda inversa</h3>
-      <MathBlock>Q = 120 - (<Frac n="1" d="2"/>)P</MathBlock>
+      <BlockMath math={`Q = 120 - (\frac{1}{2})P`} />
       <p>Despejamos P.</p>
-      <MathBlock>(<Frac n="1" d="2"/>)P = 120 - Q</MathBlock>
+      <BlockMath math={`(\frac{1}{2})P = 120 - Q`} />
       <p>Multiplicamos todo por 2:</p>
-      <MathBlock>P = 240 - 2Q</MathBlock>
-      <p>Sustituimos Q = q<sub>1</sub> + q<sub>2</sub>:</p>
-      <MathBlock>P = 240 - 2(q<sub>1</sub> + q<sub>2</sub>)</MathBlock>
+      <BlockMath math={`P = 240 - 2Q`} />
+      <p>Sustituimos Q = q_1 + q_2:</p>
+      <BlockMath math={`P = 240 - 2(q_1 + q_2)`} />
       <p>Abrimos paréntesis:</p>
-      <MathBlock>P = 240 - 2q<sub>1</sub> - 2q<sub>2</sub></MathBlock>
+      <BlockMath math={`P = 240 - 2q_1 - 2q_2`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 3. Ganancia de la empresa 1</h3>
-      <MathBlock><Pi sub="1"/> = P·q<sub>1</sub> - 7q<sub>1</sub></MathBlock>
+      <BlockMath math={`\pi_1 = P\cdot q_1 - 7q_1`} />
       <p>Sustituimos P:</p>
-      <MathBlock><Pi sub="1"/> = (240 - 2q<sub>1</sub> - 2q<sub>2</sub>)q<sub>1</sub> - 7q<sub>1</sub></MathBlock>
+      <BlockMath math={`\pi_1 = (240 - 2q_1 - 2q_2)q_1 - 7q_1`} />
       <p>Multiplicamos:</p>
-      <MathBlock><Pi sub="1"/> = 240q<sub>1</sub> - 2q<sub>1</sub>² - 2q<sub>1</sub>q<sub>2</sub> - 7q<sub>1</sub></MathBlock>
+      <BlockMath math={`\pi_1 = 240q_1 - 2q_1^2 - 2q_1q_2 - 7q_1`} />
       <p>Juntamos términos lineales:</p>
-      <MathBlock>240q<sub>1</sub> - 7q<sub>1</sub> = 233q<sub>1</sub></MathBlock>
+      <BlockMath math={`240q_1 - 7q_1 = 233q_1`} />
       <p>Entonces:</p>
-      <MathBlock><Pi sub="1"/> = 233q<sub>1</sub> - 2q<sub>1</sub>² - 2q<sub>1</sub>q<sub>2</sub></MathBlock>
+      <BlockMath math={`\pi_1 = 233q_1 - 2q_1^2 - 2q_1q_2`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 4. Derivar para la empresa 1</h3>
-      <MathBlock>d<Pi sub="1"/>/dq<sub>1</sub> = 233 - 4q<sub>1</sub> - 2q<sub>2</sub></MathBlock>
+      <BlockMath math={`d\pi_1/dq_1 = 233 - 4q_1 - 2q_2`} />
       <p>Igualamos a cero:</p>
-      <MathBlock>233 - 4q<sub>1</sub> - 2q<sub>2</sub> = 0</MathBlock>
-      <p>Despejamos q<sub>1</sub>:</p>
-      <MathBlock>
-        4q<sub>1</sub> = 233 - 2q<sub>2</sub><br/>
-        q<sub>1</sub> = <Frac n="233" d="4"/> - q<sub>2</sub>/2
-      </MathBlock>
+      <BlockMath math={`233 - 4q_1 - 2q_2 = 0`} />
+      <p>Despejamos q_1:</p>
+      <BlockMath math={`4q_1 = 233 - 2q_2\\
+        q_1 = \frac{233}{4} - q_2/2`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 1</h4>
-      <MathBlock>R1(q<sub>2</sub>) = q<sub>1</sub> = <Frac n="233" d="4"/> - q<sub>2</sub>/2</MathBlock>
+      <BlockMath math={`R1(q_2) = q_1 = \frac{233}{4} - q_2/2`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 5. Ganancia de la empresa 2</h3>
-      <MathBlock>C<sub>2</sub> = 3.5q<sub>2</sub>² = (<Frac n="7" d="2"/>)q<sub>2</sub>²</MathBlock>
+      <BlockMath math={`C_2 = 3.5q_2^2 = (\frac{7}{2})q_2^2`} />
       <p>Entonces:</p>
-      <MathBlock><Pi sub="2"/> = P·q<sub>2</sub> - (<Frac n="7" d="2"/>)q<sub>2</sub>²</MathBlock>
+      <BlockMath math={`\pi_2 = P\cdot q_2 - (\frac{7}{2})q_2^2`} />
       <p>Sustituimos P:</p>
-      <MathBlock><Pi sub="2"/> = (240 - 2q<sub>1</sub> - 2q<sub>2</sub>)q<sub>2</sub> - (<Frac n="7" d="2"/>)q<sub>2</sub>²</MathBlock>
+      <BlockMath math={`\pi_2 = (240 - 2q_1 - 2q_2)q_2 - (\frac{7}{2})q_2^2`} />
       <p>Multiplicamos:</p>
-      <MathBlock><Pi sub="2"/> = 240q<sub>2</sub> - 2q<sub>1</sub>q<sub>2</sub> - 2q<sub>2</sub>² - (<Frac n="7" d="2"/>)q<sub>2</sub>²</MathBlock>
-      <p>Juntamos los términos con q<sub>2</sub>²:</p>
-      <MathBlock>-2q<sub>2</sub>² - (<Frac n="7" d="2"/>)q<sub>2</sub>²</MathBlock>
-      <MathBlock>-2q<sub>2</sub>² = -(<Frac n="4" d="2"/>)q<sub>2</sub>²</MathBlock>
+      <BlockMath math={`\pi_2 = 240q_2 - 2q_1q_2 - 2q_2^2 - (\frac{7}{2})q_2^2`} />
+      <p>Juntamos los términos con q_2^2:</p>
+      <BlockMath math={`-2q_2^2 - (\frac{7}{2})q_2^2`} />
+      <BlockMath math={`-2q_2^2 = -(\frac{4}{2})q_2^2`} />
       <p>Entonces:</p>
-      <MathBlock>-(<Frac n="4" d="2"/>)q<sub>2</sub>² - (<Frac n="7" d="2"/>)q<sub>2</sub>² = -(<Frac n="11" d="2"/>)q<sub>2</sub>²</MathBlock>
+      <BlockMath math={`-(\frac{4}{2})q_2^2 - (\frac{7}{2})q_2^2 = -(\frac{11}{2})q_2^2`} />
       <p>Así queda:</p>
-      <MathBlock><Pi sub="2"/> = 240q<sub>2</sub> - 2q<sub>1</sub>q<sub>2</sub> - (<Frac n="11" d="2"/>)q<sub>2</sub>²</MathBlock>
+      <BlockMath math={`\pi_2 = 240q_2 - 2q_1q_2 - (\frac{11}{2})q_2^2`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 6. Derivar para la empresa 2</h3>
-      <MathBlock>d<Pi sub="2"/>/dq<sub>2</sub> = 240 - 2q<sub>1</sub> - 11q<sub>2</sub></MathBlock>
+      <BlockMath math={`d\pi_2/dq_2 = 240 - 2q_1 - 11q_2`} />
       <p>Igualamos a cero:</p>
-      <MathBlock>240 - 2q<sub>1</sub> - 11q<sub>2</sub> = 0</MathBlock>
-      <p>Despejamos q<sub>2</sub>:</p>
-      <MathBlock>
-        11q<sub>2</sub> = 240 - 2q<sub>1</sub><br/>
-        q<sub>2</sub> = (240 - 2q<sub>1</sub>)/11
-      </MathBlock>
+      <BlockMath math={`240 - 2q_1 - 11q_2 = 0`} />
+      <p>Despejamos q_2:</p>
+      <BlockMath math={`11q_2 = 240 - 2q_1\\
+        q_2 = (240 - 2q_1)/11`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 2</h4>
-      <MathBlock>R2(q<sub>1</sub>) = q<sub>2</sub> = (240 - 2q<sub>1</sub>)/11</MathBlock>
+      <BlockMath math={`R2(q_1) = q_2 = (240 - 2q_1)/11`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 7. Resolver el sistema</h3>
       <p>Tenemos:</p>
-      <MathBlock>
-        q<sub>1</sub> = <Frac n="233" d="4"/> - q<sub>2</sub>/2<br/>
-        q<sub>2</sub> = (240 - 2q<sub>1</sub>)/11
-      </MathBlock>
-      <p>Sustituimos q<sub>2</sub> en la ecuación de q<sub>1</sub>:</p>
-      <MathBlock>
-        q<sub>1</sub> = <Frac n="233" d="4"/> - (<Frac n="1" d="2"/>)[(240 - 2q<sub>1</sub>)/11]<br/>
-        q<sub>1</sub> = <Frac n="233" d="4"/> - (240 - 2q<sub>1</sub>)/22<br/>
-        q<sub>1</sub> = <Frac n="233" d="4"/> - <Frac n="120" d="11"/> + q<sub>1</sub>/11
-      </MathBlock>
-      <p>Pasamos q<sub>1</sub>/11 al lado izquierdo:</p>
-      <MathBlock>q<sub>1</sub> - q<sub>1</sub>/11 = <Frac n="233" d="4"/> - <Frac n="120" d="11"/></MathBlock>
+      <BlockMath math={`q_1 = \frac{233}{4} - q_2/2\\
+        q_2 = (240 - 2q_1)/11`} />
+      <p>Sustituimos q_2 en la ecuación de q_1:</p>
+      <BlockMath math={`q_1 = \frac{233}{4} - (\frac{1}{2})[(240 - 2q_1)/11]\\
+        q_1 = \frac{233}{4} - (240 - 2q_1)/22\\
+        q_1 = \frac{233}{4} - \frac{120}{11} + q_1/11`} />
+      <p>Pasamos q_1/11 al lado izquierdo:</p>
+      <BlockMath math={`q_1 - q_1/11 = \frac{233}{4} - \frac{120}{11}`} />
       <p>Lado izquierdo:</p>
-      <MathBlock>(<Frac n="10" d="11"/>)q<sub>1</sub></MathBlock>
+      <BlockMath math={`(\frac{10}{11})q_1`} />
       <p>Lado derecho, con denominador común 44:</p>
-      <MathBlock>
-        <Frac n="233" d="4"/> = <Frac n="2563" d="44"/><br/>
-        <Frac n="120" d="11"/> = <Frac n="480" d="44"/>
-      </MathBlock>
+      <BlockMath math={`\frac{233}{4} = \frac{2563}{44}\\
+        \frac{120}{11} = \frac{480}{44}`} />
       <p>Entonces:</p>
-      <MathBlock><Frac n="233" d="4"/> - <Frac n="120" d="11"/> = <Frac n="2083" d="44"/></MathBlock>
+      <BlockMath math={`\frac{233}{4} - \frac{120}{11} = \frac{2083}{44}`} />
       <p>Así:</p>
-      <MathBlock>(<Frac n="10" d="11"/>)q<sub>1</sub> = <Frac n="2083" d="44"/></MathBlock>
+      <BlockMath math={`(\frac{10}{11})q_1 = \frac{2083}{44}`} />
       <p>Multiplicamos por 11/10:</p>
-      <MathBlock>
-        q<sub>1</sub> = (<Frac n="2083" d="44"/>)(<Frac n="11" d="10"/>)<br/>
-        q<sub>1</sub> = <Frac n="2083" d="40"/>
-      </MathBlock>
+      <BlockMath math={`q_1 = (\frac{2083}{44})(\frac{11}{10})\\
+        q_1 = \frac{2083}{40}`} />
 
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Resultado de la empresa 1</h4>
-      <MathBlock>q<sub>1</sub>* = <Frac n="2083" d="40"/> = 52.075</MathBlock>
+      <BlockMath math={`q_1* = \frac{2083}{40} = 52.075`} />
 
-      <p>Ahora sustituimos en q<sub>2</sub>:</p>
-      <MathBlock>
-        q<sub>2</sub> = (240 - 2q<sub>1</sub>)/11<br/>
-        q<sub>2</sub> = [240 - 2(<Frac n="2083" d="40"/>)]/11<br/>
-        q<sub>2</sub> = [240 - <Frac n="2083" d="20"/>]/11
-      </MathBlock>
-      <MathBlock>240 = <Frac n="4800" d="20"/></MathBlock>
+      <p>Ahora sustituimos en q_2:</p>
+      <BlockMath math={`q_2 = (240 - 2q_1)/11\\
+        q_2 = [240 - 2(\frac{2083}{40})]/11\\
+        q_2 = [240 - \frac{2083}{20}]/11`} />
+      <BlockMath math={`240 = \frac{4800}{20}`} />
       <p>Entonces:</p>
-      <MathBlock>
-        q<sub>2</sub> = [(<Frac n="4800" d="20"/>) - (<Frac n="2083" d="20"/>)]/11<br/>
-        q<sub>2</sub> = (<Frac n="2717" d="20"/>)/11<br/>
-        q<sub>2</sub> = <Frac n="2717" d="220"/><br/>
-        q<sub>2</sub> = <Frac n="247" d="20"/>
-      </MathBlock>
+      <BlockMath math={`q_2 = [(\frac{4800}{20}) - (\frac{2083}{20})]/11\\
+        q_2 = (\frac{2717}{20})/11\\
+        q_2 = \frac{2717}{220}\\
+        q_2 = \frac{247}{20}`} />
 
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Resultado de la empresa 2</h4>
-      <MathBlock>q<sub>2</sub>* = <Frac n="247" d="20"/> = 12.35</MathBlock>
+      <BlockMath math={`q_2* = \frac{247}{20} = 12.35`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 8. Cantidad total</h3>
-      <MathBlock>
-        Q* = q<sub>1</sub>* + q<sub>2</sub>*<br/>
-        Q* = <Frac n="2083" d="40"/> + <Frac n="247" d="20"/>
-      </MathBlock>
-      <MathBlock><Frac n="247" d="20"/> = <Frac n="494" d="40"/></MathBlock>
+      <BlockMath math={`Q* = q_1* + q_2*\\
+        Q* = \frac{2083}{40} + \frac{247}{20}`} />
+      <BlockMath math={`\frac{247}{20} = \frac{494}{40}`} />
       <p>Entonces:</p>
-      <MathBlock>
-        Q* = <Frac n="2083" d="40"/> + <Frac n="494" d="40"/> = <Frac n="2577" d="40"/><br/>
-        Q* = 64.425
-      </MathBlock>
+      <BlockMath math={`Q* = \frac{2083}{40} + \frac{494}{40} = \frac{2577}{40}\\
+        Q* = 64.425`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 9. Precio de equilibrio</h3>
-      <MathBlock>
-        P = 240 - 2Q<br/>
-        P* = 240 - 2(<Frac n="2577" d="40"/>)<br/>
-        P* = 240 - <Frac n="2577" d="20"/>
-      </MathBlock>
-      <MathBlock>240 = <Frac n="4800" d="20"/></MathBlock>
+      <BlockMath math={`P = 240 - 2Q\\
+        P* = 240 - 2(\frac{2577}{40})\\
+        P* = 240 - \frac{2577}{20}`} />
+      <BlockMath math={`240 = \frac{4800}{20}`} />
       <p>Entonces:</p>
-      <MathBlock>
-        P* = (<Frac n="4800" d="20"/>) - (<Frac n="2577" d="20"/>)<br/>
-        P* = <Frac n="2223" d="20"/><br/>
-        P* = 111.15
-      </MathBlock>
+      <BlockMath math={`P* = (\frac{4800}{20}) - (\frac{2577}{20})\\
+        P* = \frac{2223}{20}\\
+        P* = 111.15`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 10. Ganancias</h3>
       <h4 style={{ color: 'var(--color-text-main)' }}>Empresa 1</h4>
-      <MathBlock>
-        <Pi sub="1"/>* = P*q<sub>1</sub> - 7q<sub>1</sub><br/>
-        <Pi sub="1"/>* = (P - 7)q<sub>1</sub><br/>
-        P - 7 = 111.15 - 7 = 104.15
-      </MathBlock>
+      <BlockMath math={`\pi_1* = P*q_1 - 7q_1\\
+        \pi_1* = (P - 7)q_1\\
+        P - 7 = 111.15 - 7 = 104.15`} />
       <p>Entonces:</p>
-      <MathBlock><Pi sub="1"/>* = 5423.61125</MathBlock>
+      <BlockMath math={`\pi_1* = 5423.61125`} />
 
       <h4 style={{ color: 'var(--color-text-main)' }}>Empresa 2</h4>
-      <MathBlock>
-        <Pi sub="2"/>* = P*q<sub>2</sub> - 3.5q<sub>2</sub>²<br/>
-        <Pi sub="2"/>* = 838.87375
-      </MathBlock>
+      <BlockMath math={`\pi_2* = P*q_2 - 3.5q_2^2\\
+        \pi_2* = 838.87375`} />
 
       <div style={{ margin: '2rem 0', padding: '1.5rem', border: '1px solid var(--color-border)', borderRadius: '8px', backgroundColor: 'var(--color-bg-card)' }}>
         <h3 style={{ marginTop: 0, color: 'var(--color-accent-gold)' }}>Resultado final del ejercicio 3 ✅</h3>
         <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.2rem', fontFamily: 'Merriweather', margin: 0 }}>
-          <li>q<sub>1</sub>* = 52.075</li>
-          <li>q<sub>2</sub>* = 12.35</li>
-          <li>Q* = 64.425</li>
-          <li>P* = 111.15</li>
-          <li><Pi sub="1"/>* = 5423.61125</li>
-          <li><Pi sub="2"/>* = 838.87375</li>
+          <li><InlineMath math={`q_1^* = 52.075`} /></li>
+          <li><InlineMath math={`q_2^* = 12.35`} /></li>
+          <li><InlineMath math={`Q^* = 64.425`} /></li>
+          <li><InlineMath math={`P^* = 111.15`} /></li>
+          <li><InlineMath math={`\pi_1^* = 5423.61125`} /></li>
+          <li><InlineMath math={`\pi_2^* = 838.87375`} /></li>
         </ul>
       </div>
 
@@ -180,10 +153,10 @@ export const Exercise3 = () => {
         <p style={{ margin: 0 }}>
           Este ejercicio da un precio mucho más alto. ¿Por qué? Porque la demanda inversa queda:
         </p>
-        <MathBlock>P = 240 - 2Q</MathBlock>
+        <BlockMath math={`P = 240 - 2Q`} />
         <p style={{ margin: 0 }}>
           Eso hace que el precio baje muy rápido cuando cambia Q, y al mismo tiempo parte desde un nivel muy alto.
-          La empresa 2 vuelve a producir menos porque su costo cuadrático de 3.5q<sub>2</sub>² la castiga bastante cuando intenta aumentar producción.
+          La empresa 2 vuelve a producir menos porque su costo cuadrático de 3.5q_2^2 la castiga bastante cuando intenta aumentar producción.
         </p>
       </div>
     </Accordion>
