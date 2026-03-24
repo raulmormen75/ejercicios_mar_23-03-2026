@@ -1,0 +1,1162 @@
+# Método de Cournot
+## Material listo para aplicación web 📘✨
+
+Este material está pensado para alumnos a quienes todavía les cuesta trabajo la parte matemática.
+La idea es ir despacio, sin brincos, y explicando qué se hace en cada renglón.
+
+--------------------------------------------------
+## ¿Qué se hace en todos los ejercicios? 🤓
+--------------------------------------------------
+
+En Cournot, cada empresa decide cuánto producir.
+
+Usaremos siempre estas ideas:
+
+1. La cantidad total del mercado es:
+
+   Q = q1 + q2
+
+2. La demanda casi siempre viene así:
+
+   Q = a - bP
+
+   pero para trabajar Cournot conviene despejar el precio:
+
+   P = demanda inversa
+
+3. La ganancia de cada empresa es:
+
+   π1 = P(q1) - C1
+   π2 = P(q2) - C2
+
+   mejor escrita:
+
+   π1 = P·q1 - C1(q1)
+   π2 = P·q2 - C2(q2)
+
+4. Luego derivamos cada ganancia respecto a su propia producción:
+
+   dπ1/dq1 = 0
+   dπ2/dq2 = 0
+
+5. De ahí salen las funciones de reacción.
+
+6. Después resolvemos el sistema para hallar:
+
+   q1*
+   q2*
+   Q*
+   P*
+   π1*
+   π2*
+
+Nota sencilla:
+Cuando derivamos respecto a q1, todo lo que tenga q2 se toma como constante.
+Cuando derivamos respecto a q2, todo lo que tenga q1 se toma como constante. 🧠
+
+==================================================
+# 1) Q = 150 - 3.5P
+#    C1 = 5q1
+#    C2 = (1/2)q2^2
+==================================================
+
+## Paso 1. Escribir la cantidad total
+
+Q = q1 + q2
+
+## Paso 2. Obtener la demanda inversa
+
+Nos dan:
+
+Q = 150 - 3.5P
+
+Queremos despejar P.
+
+3.5P = 150 - Q
+
+P = (150 - Q) / 3.5
+
+Como 3.5 = 7/2, entonces dividir entre 3.5 es lo mismo que multiplicar por 2/7:
+
+P = (150 - Q)(2/7)
+
+P = 300/7 - (2/7)Q
+
+Ahora sustituimos Q = q1 + q2:
+
+P = 300/7 - (2/7)(q1 + q2)
+
+Abrimos paréntesis:
+
+P = 300/7 - (2/7)q1 - (2/7)q2
+
+## Paso 3. Ganancia de la empresa 1
+
+π1 = P·q1 - C1
+
+Como C1 = 5q1:
+
+π1 = P·q1 - 5q1
+
+Sustituimos P:
+
+π1 = [300/7 - (2/7)q1 - (2/7)q2]q1 - 5q1
+
+Multiplicamos q1 en cada término:
+
+π1 = (300/7)q1 - (2/7)q1^2 - (2/7)q1q2 - 5q1
+
+Juntamos los términos que tienen q1:
+
+(300/7)q1 - 5q1 = (300/7)q1 - (35/7)q1 = (265/7)q1
+
+Entonces:
+
+π1 = (265/7)q1 - (2/7)q1^2 - (2/7)q1q2
+
+## Paso 4. Derivar la ganancia de la empresa 1
+
+Derivamos respecto a q1:
+
+dπ1/dq1 = 265/7 - (4/7)q1 - (2/7)q2
+
+Igualamos a cero:
+
+265/7 - (4/7)q1 - (2/7)q2 = 0
+
+Multiplicamos todo por 7 para quitar denominadores:
+
+265 - 4q1 - 2q2 = 0
+
+Despejamos q1:
+
+4q1 = 265 - 2q2
+
+q1 = (265 - 2q2)/4
+
+q1 = 265/4 - q2/2
+
+## Función de reacción de la empresa 1
+
+R1(q2) = q1 = 265/4 - q2/2
+
+## Paso 5. Ganancia de la empresa 2
+
+π2 = P·q2 - C2
+
+Como C2 = (1/2)q2^2:
+
+π2 = P·q2 - (1/2)q2^2
+
+Sustituimos P:
+
+π2 = [300/7 - (2/7)q1 - (2/7)q2]q2 - (1/2)q2^2
+
+Multiplicamos q2:
+
+π2 = (300/7)q2 - (2/7)q1q2 - (2/7)q2^2 - (1/2)q2^2
+
+Juntamos los términos con q2^2:
+
+-(2/7)q2^2 - (1/2)q2^2
+
+Buscamos denominador común 14:
+
+-(4/14)q2^2 - (7/14)q2^2 = -(11/14)q2^2
+
+Entonces:
+
+π2 = (300/7)q2 - (2/7)q1q2 - (11/14)q2^2
+
+## Paso 6. Derivar la ganancia de la empresa 2
+
+Derivamos respecto a q2:
+
+dπ2/dq2 = 300/7 - (2/7)q1 - (11/7)q2
+
+Igualamos a cero:
+
+300/7 - (2/7)q1 - (11/7)q2 = 0
+
+Multiplicamos todo por 7:
+
+300 - 2q1 - 11q2 = 0
+
+Despejamos q2:
+
+11q2 = 300 - 2q1
+
+q2 = (300 - 2q1)/11
+
+## Función de reacción de la empresa 2
+
+R2(q1) = q2 = (300 - 2q1)/11
+
+## Paso 7. Resolver el sistema
+
+Tenemos:
+
+q1 = 265/4 - q2/2
+q2 = (300 - 2q1)/11
+
+Sustituimos q2 en la ecuación de q1:
+
+q1 = 265/4 - (1/2)[(300 - 2q1)/11]
+
+q1 = 265/4 - (300 - 2q1)/22
+
+Separamos:
+
+q1 = 265/4 - 300/22 + (2q1)/22
+
+q1 = 265/4 - 150/11 + q1/11
+
+Pasamos q1/11 al lado izquierdo:
+
+q1 - q1/11 = 265/4 - 150/11
+
+Sacamos denominador común del lado izquierdo:
+
+(11/11)q1 - (1/11)q1 = (10/11)q1
+
+Ahora el lado derecho:
+
+265/4 - 150/11
+
+Denominador común 44:
+
+(2915/44) - (600/44) = 2315/44
+
+Entonces:
+
+(10/11)q1 = 2315/44
+
+Multiplicamos por 11/10:
+
+q1 = (2315/44)(11/10)
+
+q1 = 463/8
+
+## Resultado de la empresa 1
+
+q1* = 463/8 = 57.875
+
+Ahora sustituimos en la reacción de la empresa 2:
+
+q2 = (300 - 2q1)/11
+
+q2 = [300 - 2(463/8)]/11
+
+q2 = [300 - 463/4]/11
+
+Pasamos 300 a cuartos:
+
+300 = 1200/4
+
+Entonces:
+
+q2 = [(1200/4) - (463/4)]/11
+
+q2 = (737/4)/11
+
+q2 = 737/44
+
+q2 = 67/4
+
+## Resultado de la empresa 2
+
+q2* = 67/4 = 16.75
+
+## Paso 8. Cantidad total de equilibrio
+
+Q* = q1* + q2*
+
+Q* = 463/8 + 67/4
+
+Pasamos 67/4 a octavos:
+
+67/4 = 134/8
+
+Entonces:
+
+Q* = 463/8 + 134/8 = 597/8
+
+Q* = 74.625
+
+## Paso 9. Precio de equilibrio
+
+P = (150 - Q)/3.5
+
+P* = (150 - 597/8)/3.5
+
+Primero resolvemos el numerador:
+
+150 = 1200/8
+
+150 - 597/8 = 603/8
+
+Entonces:
+
+P* = (603/8) / (7/2)
+
+Dividir entre 7/2 es multiplicar por 2/7:
+
+P* = (603/8)(2/7)
+
+P* = 603/28
+
+P* ≈ 21.5357
+
+## Paso 10. Ganancia de equilibrio de cada empresa
+
+### Empresa 1
+
+π1* = P*q1 - 5q1
+
+π1* = (603/28)(463/8) - 5(463/8)
+
+También puede verse como:
+
+π1* = (P - 5)q1
+
+P - 5 = 603/28 - 140/28 = 463/28
+
+Entonces:
+
+π1* = (463/28)(463/8)
+
+π1* = 214369/224
+
+π1* ≈ 957.0045
+
+### Empresa 2
+
+π2* = P*q2 - (1/2)q2^2
+
+π2* = (603/28)(67/4) - (1/2)(67/4)^2
+
+π2* = 49379/224
+
+π2* ≈ 220.4420
+
+## Resultado final del ejercicio 1 ✅
+
+q1* = 57.875
+q2* = 16.75
+Q*  = 74.625
+P*  ≈ 21.5357
+π1* ≈ 957.0045
+π2* ≈ 220.4420
+
+## Interpretación sencilla 🌷
+
+La empresa 1 produce mucho más que la empresa 2.
+Eso pasa porque la empresa 1 tiene costo lineal de 5 por unidad, mientras que la empresa 2 tiene costo cuadrático.
+En palabras simples, a la empresa 2 le sale cada vez más caro producir mucho, por eso se frena antes.
+Por eso q1 sale grande y q2 sale más pequeño.
+
+==================================================
+# 2) Q = 100 - 3P
+#    C1 = 4q1
+#    C2 = (1/5)q2^2
+==================================================
+
+## Paso 1. Cantidad total
+
+Q = q1 + q2
+
+## Paso 2. Demanda inversa
+
+Q = 100 - 3P
+
+Despejamos P:
+
+3P = 100 - Q
+
+P = (100 - Q)/3
+
+Sustituimos Q = q1 + q2:
+
+P = (100 - q1 - q2)/3
+
+Separamos:
+
+P = 100/3 - (1/3)q1 - (1/3)q2
+
+## Paso 3. Ganancia de la empresa 1
+
+π1 = P·q1 - 4q1
+
+Sustituimos P:
+
+π1 = [100/3 - (1/3)q1 - (1/3)q2]q1 - 4q1
+
+Multiplicamos:
+
+π1 = (100/3)q1 - (1/3)q1^2 - (1/3)q1q2 - 4q1
+
+Juntamos términos lineales en q1:
+
+(100/3)q1 - 4q1 = (100/3)q1 - (12/3)q1 = (88/3)q1
+
+Entonces:
+
+π1 = (88/3)q1 - (1/3)q1^2 - (1/3)q1q2
+
+## Paso 4. Derivar para la empresa 1
+
+dπ1/dq1 = 88/3 - (2/3)q1 - (1/3)q2
+
+Igualamos a cero:
+
+88/3 - (2/3)q1 - (1/3)q2 = 0
+
+Multiplicamos todo por 3:
+
+88 - 2q1 - q2 = 0
+
+Despejamos q1:
+
+2q1 = 88 - q2
+
+q1 = 44 - q2/2
+
+## Función de reacción de la empresa 1
+
+R1(q2) = q1 = 44 - q2/2
+
+## Paso 5. Ganancia de la empresa 2
+
+π2 = P·q2 - (1/5)q2^2
+
+Sustituimos P:
+
+π2 = [100/3 - (1/3)q1 - (1/3)q2]q2 - (1/5)q2^2
+
+Multiplicamos:
+
+π2 = (100/3)q2 - (1/3)q1q2 - (1/3)q2^2 - (1/5)q2^2
+
+Juntamos los términos con q2^2:
+
+-(1/3)q2^2 - (1/5)q2^2
+
+Denominador común 15:
+
+-(5/15)q2^2 - (3/15)q2^2 = -(8/15)q2^2
+
+Entonces:
+
+π2 = (100/3)q2 - (1/3)q1q2 - (8/15)q2^2
+
+## Paso 6. Derivar para la empresa 2
+
+dπ2/dq2 = 100/3 - (1/3)q1 - (16/15)q2
+
+Igualamos a cero:
+
+100/3 - (1/3)q1 - (16/15)q2 = 0
+
+Multiplicamos todo por 15:
+
+500 - 5q1 - 16q2 = 0
+
+Despejamos q2:
+
+16q2 = 500 - 5q1
+
+q2 = (500 - 5q1)/16
+
+## Función de reacción de la empresa 2
+
+R2(q1) = q2 = (500 - 5q1)/16
+
+## Paso 7. Resolver el sistema
+
+Tenemos:
+
+q1 = 44 - q2/2
+q2 = (500 - 5q1)/16
+
+Sustituimos q2 en la ecuación de q1:
+
+q1 = 44 - (1/2)[(500 - 5q1)/16]
+
+q1 = 44 - (500 - 5q1)/32
+
+Separamos:
+
+q1 = 44 - 500/32 + (5q1)/32
+
+q1 = 44 - 125/8 + (5q1)/32
+
+Pasamos (5q1)/32 al lado izquierdo:
+
+q1 - (5q1)/32 = 44 - 125/8
+
+Lado izquierdo:
+
+(32/32)q1 - (5/32)q1 = (27/32)q1
+
+Lado derecho:
+
+44 = 352/8
+
+352/8 - 125/8 = 227/8
+
+Entonces:
+
+(27/32)q1 = 227/8
+
+Multiplicamos por 32/27:
+
+q1 = (227/8)(32/27)
+
+q1 = 908/27
+
+## Resultado de la empresa 1
+
+q1* = 908/27 ≈ 33.6296
+
+Ahora sustituimos en la reacción de q2:
+
+q2 = (500 - 5q1)/16
+
+q2 = [500 - 5(908/27)]/16
+
+q2 = [500 - 4540/27]/16
+
+Pasamos 500 a veintisietavos:
+
+500 = 13500/27
+
+Entonces:
+
+q2 = [(13500/27) - (4540/27)]/16
+
+q2 = (8960/27)/16
+
+q2 = 8960/432
+
+q2 = 560/27
+
+## Resultado de la empresa 2
+
+q2* = 560/27 ≈ 20.7407
+
+## Paso 8. Cantidad total
+
+Q* = q1* + q2*
+
+Q* = 908/27 + 560/27 = 1468/27
+
+Q* ≈ 54.3704
+
+## Paso 9. Precio de equilibrio
+
+P = (100 - Q)/3
+
+P* = [100 - (1468/27)]/3
+
+100 = 2700/27
+
+Entonces:
+
+P* = [(2700/27) - (1468/27)]/3
+
+P* = (1232/27)/3
+
+P* = 1232/81
+
+P* ≈ 15.2099
+
+## Paso 10. Ganancias
+
+### Empresa 1
+
+π1* = P*q1 - 4q1
+
+π1* = (P - 4)q1
+
+P - 4 = 1232/81 - 324/81 = 908/81
+
+Entonces:
+
+π1* = (908/81)(908/27)
+
+π1* = 824464/2187
+
+π1* ≈ 376.9840
+
+### Empresa 2
+
+π2* = P*q2 - (1/5)q2^2
+
+π2* = 501760/2187
+
+π2* ≈ 229.4284
+
+## Resultado final del ejercicio 2 ✅
+
+q1* ≈ 33.6296
+q2* ≈ 20.7407
+Q*  ≈ 54.3704
+P*  ≈ 15.2099
+π1* ≈ 376.9840
+π2* ≈ 229.4284
+
+## Interpretación sencilla 🌼
+
+Aquí la empresa 1 también produce más, pero la diferencia ya no es tan enorme como en el ejercicio 1.
+La empresa 2 tiene costo cuadrático, sí, pero es más suave porque el coeficiente es 1/5.
+Eso le permite producir más que en el ejercicio anterior.
+
+==================================================
+# 3) Q = 120 - (1/2)P
+#    C1 = 7q1
+#    C2 = 3.5q2^2
+==================================================
+
+## Paso 1. Cantidad total
+
+Q = q1 + q2
+
+## Paso 2. Demanda inversa
+
+Q = 120 - (1/2)P
+
+Despejamos P.
+
+(1/2)P = 120 - Q
+
+Multiplicamos todo por 2:
+
+P = 240 - 2Q
+
+Sustituimos Q = q1 + q2:
+
+P = 240 - 2(q1 + q2)
+
+Abrimos paréntesis:
+
+P = 240 - 2q1 - 2q2
+
+## Paso 3. Ganancia de la empresa 1
+
+π1 = P·q1 - 7q1
+
+Sustituimos P:
+
+π1 = (240 - 2q1 - 2q2)q1 - 7q1
+
+Multiplicamos:
+
+π1 = 240q1 - 2q1^2 - 2q1q2 - 7q1
+
+Juntamos términos lineales:
+
+240q1 - 7q1 = 233q1
+
+Entonces:
+
+π1 = 233q1 - 2q1^2 - 2q1q2
+
+## Paso 4. Derivar para la empresa 1
+
+dπ1/dq1 = 233 - 4q1 - 2q2
+
+Igualamos a cero:
+
+233 - 4q1 - 2q2 = 0
+
+Despejamos q1:
+
+4q1 = 233 - 2q2
+
+q1 = 233/4 - q2/2
+
+## Función de reacción de la empresa 1
+
+R1(q2) = q1 = 233/4 - q2/2
+
+## Paso 5. Ganancia de la empresa 2
+
+C2 = 3.5q2^2 = (7/2)q2^2
+
+Entonces:
+
+π2 = P·q2 - (7/2)q2^2
+
+Sustituimos P:
+
+π2 = (240 - 2q1 - 2q2)q2 - (7/2)q2^2
+
+Multiplicamos:
+
+π2 = 240q2 - 2q1q2 - 2q2^2 - (7/2)q2^2
+
+Juntamos los términos con q2^2:
+
+-2q2^2 - (7/2)q2^2
+
+-2q2^2 = -(4/2)q2^2
+
+Entonces:
+
+-(4/2)q2^2 - (7/2)q2^2 = -(11/2)q2^2
+
+Así queda:
+
+π2 = 240q2 - 2q1q2 - (11/2)q2^2
+
+## Paso 6. Derivar para la empresa 2
+
+dπ2/dq2 = 240 - 2q1 - 11q2
+
+Igualamos a cero:
+
+240 - 2q1 - 11q2 = 0
+
+Despejamos q2:
+
+11q2 = 240 - 2q1
+
+q2 = (240 - 2q1)/11
+
+## Función de reacción de la empresa 2
+
+R2(q1) = q2 = (240 - 2q1)/11
+
+## Paso 7. Resolver el sistema
+
+Tenemos:
+
+q1 = 233/4 - q2/2
+q2 = (240 - 2q1)/11
+
+Sustituimos q2 en la ecuación de q1:
+
+q1 = 233/4 - (1/2)[(240 - 2q1)/11]
+
+q1 = 233/4 - (240 - 2q1)/22
+
+q1 = 233/4 - 120/11 + q1/11
+
+Pasamos q1/11 al lado izquierdo:
+
+q1 - q1/11 = 233/4 - 120/11
+
+Lado izquierdo:
+
+(10/11)q1
+
+Lado derecho, con denominador común 44:
+
+233/4 = 2563/44
+120/11 = 480/44
+
+Entonces:
+
+233/4 - 120/11 = 2083/44
+
+Así:
+
+(10/11)q1 = 2083/44
+
+Multiplicamos por 11/10:
+
+q1 = (2083/44)(11/10)
+
+q1 = 2083/40
+
+## Resultado de la empresa 1
+
+q1* = 2083/40 = 52.075
+
+Ahora sustituimos en q2:
+
+q2 = (240 - 2q1)/11
+
+q2 = [240 - 2(2083/40)]/11
+
+q2 = [240 - 2083/20]/11
+
+240 = 4800/20
+
+Entonces:
+
+q2 = [(4800/20) - (2083/20)]/11
+
+q2 = (2717/20)/11
+
+q2 = 2717/220
+
+q2 = 247/20
+
+## Resultado de la empresa 2
+
+q2* = 247/20 = 12.35
+
+## Paso 8. Cantidad total
+
+Q* = q1* + q2*
+
+Q* = 2083/40 + 247/20
+
+247/20 = 494/40
+
+Entonces:
+
+Q* = 2083/40 + 494/40 = 2577/40
+
+Q* = 64.425
+
+## Paso 9. Precio de equilibrio
+
+P = 240 - 2Q
+
+P* = 240 - 2(2577/40)
+
+P* = 240 - 2577/20
+
+240 = 4800/20
+
+Entonces:
+
+P* = (4800/20) - (2577/20)
+
+P* = 2223/20
+
+P* = 111.15
+
+## Paso 10. Ganancias
+
+### Empresa 1
+
+π1* = P*q1 - 7q1
+
+π1* = (P - 7)q1
+
+P - 7 = 111.15 - 7 = 104.15
+
+Entonces:
+
+π1* = 5423.61125
+
+### Empresa 2
+
+π2* = P*q2 - 3.5q2^2
+
+π2* = 838.87375
+
+## Resultado final del ejercicio 3 ✅
+
+q1* = 52.075
+q2* = 12.35
+Q*  = 64.425
+P*  = 111.15
+π1* = 5423.61125
+π2* = 838.87375
+
+## Interpretación sencilla 🌸
+
+Este ejercicio da un precio mucho más alto.
+¿Por qué?
+Porque la demanda inversa queda:
+
+P = 240 - 2Q
+
+Eso hace que el precio baje muy rápido cuando cambia Q, y al mismo tiempo parte desde un nivel muy alto.
+La empresa 2 vuelve a producir menos porque su costo cuadrático de 3.5q2^2 la castiga bastante cuando intenta aumentar producción.
+
+==================================================
+# 4.) Q = 50 - 2P
+#     C1 = 2q1
+#     C2 = 3.5q2^2
+==================================================
+
+## Paso 1. Cantidad total
+
+Q = q1 + q2
+
+## Paso 2. Demanda inversa
+
+Q = 50 - 2P
+
+Despejamos P:
+
+2P = 50 - Q
+
+P = (50 - Q)/2
+
+Separamos:
+
+P = 25 - Q/2
+
+Sustituimos Q = q1 + q2:
+
+P = 25 - (q1 + q2)/2
+
+P = 25 - q1/2 - q2/2
+
+## Paso 3. Ganancia de la empresa 1
+
+π1 = P·q1 - 2q1
+
+Sustituimos P:
+
+π1 = (25 - q1/2 - q2/2)q1 - 2q1
+
+Multiplicamos:
+
+π1 = 25q1 - (1/2)q1^2 - (1/2)q1q2 - 2q1
+
+Juntamos términos lineales:
+
+25q1 - 2q1 = 23q1
+
+Entonces:
+
+π1 = 23q1 - (1/2)q1^2 - (1/2)q1q2
+
+## Paso 4. Derivar para la empresa 1
+
+dπ1/dq1 = 23 - q1 - q2/2
+
+Igualamos a cero:
+
+23 - q1 - q2/2 = 0
+
+Despejamos q1:
+
+q1 = 23 - q2/2
+
+## Función de reacción de la empresa 1
+
+R1(q2) = q1 = 23 - q2/2
+
+## Paso 5. Ganancia de la empresa 2
+
+π2 = P·q2 - 3.5q2^2
+
+Sustituimos P:
+
+π2 = (25 - q1/2 - q2/2)q2 - 3.5q2^2
+
+Multiplicamos:
+
+π2 = 25q2 - (1/2)q1q2 - (1/2)q2^2 - 3.5q2^2
+
+Juntamos términos con q2^2:
+
+-(1/2)q2^2 - 3.5q2^2
+
+Como 3.5 = 7/2:
+
+-(1/2)q2^2 - (7/2)q2^2 = -(8/2)q2^2 = -4q2^2
+
+Entonces:
+
+π2 = 25q2 - (1/2)q1q2 - 4q2^2
+
+## Paso 6. Derivar para la empresa 2
+
+dπ2/dq2 = 25 - q1/2 - 8q2
+
+Igualamos a cero:
+
+25 - q1/2 - 8q2 = 0
+
+Multiplicamos todo por 2:
+
+50 - q1 - 16q2 = 0
+
+Despejamos q2:
+
+16q2 = 50 - q1
+
+q2 = (50 - q1)/16
+
+## Función de reacción de la empresa 2
+
+R2(q1) = q2 = (50 - q1)/16
+
+## Paso 7. Resolver el sistema
+
+Tenemos:
+
+q1 = 23 - q2/2
+q2 = (50 - q1)/16
+
+Sustituimos q2 en q1:
+
+q1 = 23 - (1/2)[(50 - q1)/16]
+
+q1 = 23 - (50 - q1)/32
+
+q1 = 23 - 50/32 + q1/32
+
+q1 = 23 - 25/16 + q1/32
+
+Pasamos q1/32 al lado izquierdo:
+
+q1 - q1/32 = 23 - 25/16
+
+Lado izquierdo:
+
+(31/32)q1
+
+Lado derecho:
+
+23 = 368/16
+
+368/16 - 25/16 = 343/16
+
+Entonces:
+
+(31/32)q1 = 343/16
+
+Multiplicamos por 32/31:
+
+q1 = (343/16)(32/31)
+
+q1 = 686/31
+
+## Resultado de la empresa 1
+
+q1* = 686/31 ≈ 22.1290
+
+Ahora sustituimos en q2:
+
+q2 = (50 - q1)/16
+
+q2 = [50 - (686/31)]/16
+
+50 = 1550/31
+
+Entonces:
+
+q2 = [(1550/31) - (686/31)]/16
+
+q2 = (864/31)/16
+
+q2 = 864/496
+
+q2 = 54/31
+
+## Resultado de la empresa 2
+
+q2* = 54/31 ≈ 1.7419
+
+## Paso 8. Cantidad total
+
+Q* = q1* + q2*
+
+Q* = 686/31 + 54/31 = 740/31
+
+Q* ≈ 23.8710
+
+## Paso 9. Precio de equilibrio
+
+P = (50 - Q)/2
+
+P* = [50 - (740/31)]/2
+
+50 = 1550/31
+
+Entonces:
+
+P* = [(1550/31) - (740/31)]/2
+
+P* = (810/31)/2
+
+P* = 405/31
+
+P* ≈ 13.0645
+
+## Paso 10. Ganancias
+
+### Empresa 1
+
+π1* = P*q1 - 2q1
+
+π1* = (P - 2)q1
+
+π1* ≈ 244.8470
+
+### Empresa 2
+
+π2* = P*q2 - 3.5q2^2
+
+π2* ≈ 12.1374
+
+## Resultado final del ejercicio 4 ✅
+
+q1* ≈ 22.1290
+q2* ≈ 1.7419
+Q*  ≈ 23.8710
+P*  ≈ 13.0645
+π1* ≈ 244.8470
+π2* ≈ 12.1374
+
+## Interpretación sencilla 🌺
+
+Aquí la empresa 2 casi no produce.
+No es casualidad.
+Tiene un costo cuadrático fuerte, 3.5q2^2, y además el mercado es más pequeño que en otros ejercicios.
+Entonces, si intentara producir mucho, su costo subiría demasiado.
+Por eso la empresa 1 domina casi todo el mercado.
+
+--------------------------------------------------
+## Resumen final de los 4 ejercicios 📌
+--------------------------------------------------
+
+1) Ejercicio 1
+   q1* = 57.875
+   q2* = 16.75
+   Q*  = 74.625
+   P*  ≈ 21.5357
+   π1* ≈ 957.0045
+   π2* ≈ 220.4420
+
+2) Ejercicio 2
+   q1* ≈ 33.6296
+   q2* ≈ 20.7407
+   Q*  ≈ 54.3704
+   P*  ≈ 15.2099
+   π1* ≈ 376.9840
+   π2* ≈ 229.4284
+
+3) Ejercicio 3
+   q1* = 52.075
+   q2* = 12.35
+   Q*  = 64.425
+   P*  = 111.15
+   π1* = 5423.61125
+   π2* = 838.87375
+
+4.) Ejercicio 4
+   q1* ≈ 22.1290
+   q2* ≈ 1.7419
+   Q*  ≈ 23.8710
+   P*  ≈ 13.0645
+   π1* ≈ 244.8470
+   π2* ≈ 12.1374
+
+--------------------------------------------------
+## Idea final para entenderlos rápido 💡
+--------------------------------------------------
+
+Si una empresa tiene costo lineal, suele aguantar mejor producir más.
+Si otra empresa tiene costo cuadrático, llega un punto donde producir más la castiga mucho.
+Por eso, en estos ejercicios, la empresa 1 casi siempre termina produciendo más que la empresa 2.
+
+Si quieres, en el siguiente mensaje te lo convierto a un formato todavía más limpio para app web, separado por:
+- introducción
+- teoría corta
+- ejercicio 1
+- ejercicio 2
+- ejercicio 3
+- ejercicio 4
+- resumen final
+- mini glosario
