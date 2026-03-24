@@ -4,7 +4,7 @@ import 'katex/dist/katex.min.css';
 
 export const Exercise2 = () => {
   return (
-    <Accordion title="2) Q = 100 - 3P | C₁ = 4q₁ | C₂ = (1/5)q₂^2" defaultOpen={false}>
+    <Accordion title="2) Q = 100 - 3P | C₁ = 4q₁ | C₂ = (1/5)q₂²" defaultOpen={false}>
       <h3 style={{ marginTop: 0, color: 'var(--color-accent-gold)' }}>Paso 1. Cantidad total</h3>
       <BlockMath math={`Q = q_1 + q_2`} />
 
@@ -13,7 +13,7 @@ export const Exercise2 = () => {
       <p>Despejamos P:</p>
       <BlockMath math={`3P = 100 - Q\\
         P = (100 - Q)/3`} />
-      <p>Sustituimos Q = q_1 + q_2:</p>
+      <p>Sustituimos Q = q₁ + q₂:</p>
       <BlockMath math={`P = (100 - q_1 - q_2)/3`} />
       <p>Separamos:</p>
       <BlockMath math={`P = \frac{100}{3} - (\frac{1}{3})q_1 - (\frac{1}{3})q_2`} />
@@ -24,7 +24,7 @@ export const Exercise2 = () => {
       <BlockMath math={`\pi_1 = [\frac{100}{3} - (\frac{1}{3})q_1 - (\frac{1}{3})q_2]q_1 - 4q_1`} />
       <p>Multiplicamos:</p>
       <BlockMath math={`\pi_1 = (\frac{100}{3})q_1 - (\frac{1}{3})q_1^2 - (\frac{1}{3})q_1q_2 - 4q_1`} />
-      <p>Juntamos términos lineales en q_1:</p>
+      <p>Juntamos términos lineales en q₁:</p>
       <BlockMath math={`(\frac{100}{3})q_1 - 4q_1 = (\frac{100}{3})q_1 - (\frac{12}{3})q_1 = (\frac{88}{3})q_1`} />
       <p>Entonces:</p>
       <BlockMath math={`\pi_1 = (\frac{88}{3})q_1 - (\frac{1}{3})q_1^2 - (\frac{1}{3})q_1q_2`} />
@@ -35,7 +35,7 @@ export const Exercise2 = () => {
       <BlockMath math={`\frac{88}{3} - (\frac{2}{3})q_1 - (\frac{1}{3})q_2 = 0`} />
       <p>Multiplicamos todo por 3:</p>
       <BlockMath math={`88 - 2q_1 - q_2 = 0`} />
-      <p>Despejamos q_1:</p>
+      <p>Despejamos q₁:</p>
       <BlockMath math={`2q_1 = 88 - q_2\\
         q_1 = 44 - q_2/2`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 1</h4>
@@ -47,7 +47,7 @@ export const Exercise2 = () => {
       <BlockMath math={`\pi_2 = [\frac{100}{3} - (\frac{1}{3})q_1 - (\frac{1}{3})q_2]q_2 - (\frac{1}{5})q_2^2`} />
       <p>Multiplicamos:</p>
       <BlockMath math={`\pi_2 = (\frac{100}{3})q_2 - (\frac{1}{3})q_1q_2 - (\frac{1}{3})q_2^2 - (\frac{1}{5})q_2^2`} />
-      <p>Juntamos los términos con q_2^2:</p>
+      <p>Juntamos los términos con q₂^2:</p>
       <BlockMath math={`-(\frac{1}{3})q_2^2 - (\frac{1}{5})q_2^2`} />
       <p>Denominador común 15:</p>
       <BlockMath math={`-(\frac{5}{15})q_2^2 - (\frac{3}{15})q_2^2 = -(\frac{8}{15})q_2^2`} />
@@ -60,7 +60,7 @@ export const Exercise2 = () => {
       <BlockMath math={`\frac{100}{3} - (\frac{1}{3})q_1 - (\frac{16}{15})q_2 = 0`} />
       <p>Multiplicamos todo por 15:</p>
       <BlockMath math={`500 - 5q_1 - 16q_2 = 0`} />
-      <p>Despejamos q_2:</p>
+      <p>Despejamos q₂:</p>
       <BlockMath math={`16q_2 = 500 - 5q_1\\
         q_2 = (500 - 5q_1)/16`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 2</h4>
@@ -70,7 +70,7 @@ export const Exercise2 = () => {
       <p>Tenemos:</p>
       <BlockMath math={`q_1 = 44 - q_2/2\\
         q_2 = (500 - 5q_1)/16`} />
-      <p>Sustituimos q_2 en la ecuación de q_1:</p>
+      <p>Sustituimos q₂ en la ecuación de q₁:</p>
       <BlockMath math={`q_1 = 44 - (\frac{1}{2})[(500 - 5q_1)/16]\\
         q_1 = 44 - (500 - 5q_1)/32`} />
       <p>Separamos:</p>
@@ -92,7 +92,7 @@ export const Exercise2 = () => {
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Resultado de la empresa 1</h4>
       <BlockMath math={`q_1* = \frac{908}{27} ≈ 33.6296`} />
 
-      <p>Ahora sustituimos en la reacción de q_2:</p>
+      <p>Ahora sustituimos en la reacción de q₂:</p>
       <BlockMath math={`q_2 = (500 - 5q_1)/16\\
         q_2 = [500 - 5(\frac{908}{27})]/16\\
         q_2 = [500 - \frac{4540}{27}]/16`} />

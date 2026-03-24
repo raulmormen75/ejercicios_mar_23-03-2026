@@ -14,7 +14,7 @@ export const Hero = () => {
         Ejercicios de microeconomía paso a paso 📘✨
       </h2>
       <p style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
-        Autor: Raúl Mormen
+        Autor: Raúl Morales Mendoza
       </p>
       <div style={{ maxWidth: '600px', margin: '0 auto', padding: '1.5rem', border: '1px solid var(--color-border)', borderRadius: '8px', backgroundColor: 'var(--color-bg-base)' }}>
         <p style={{ margin: 0 }}>Este material está pensado para alumnos a quienes todavía les cuesta trabajo la parte matemática. La idea es ir despacio, sin brincos, y explicando qué se hace en cada renglón.</p>

@@ -35,7 +35,7 @@ function App() {
         <Summary />
       </div>
       <footer style={{ textAlign: 'center', padding: '3rem 1rem', marginTop: '4rem', borderTop: '1px solid var(--color-border)', color: 'var(--color-text-muted)' }}>
-        <p>Aplicación didáctica interactiva elaborada por Raúl Mormen.</p>
+        <p>Aplicación didáctica interactiva elaborada por Raúl Morales Mendoza.</p>
         <p>Material exclusivo para apoyo académico en Microeconomía.</p>
       </footer>
       <BackToTop />

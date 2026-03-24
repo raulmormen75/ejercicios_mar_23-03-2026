@@ -4,7 +4,7 @@ import 'katex/dist/katex.min.css';
 
 export const Exercise1 = () => {
   return (
-    <Accordion title="1) Q = 150 - 3.5P | C₁ = 5q₁ | C₂ = (1/2)q₂^2" defaultOpen={true}>
+    <Accordion title="1) Q = 150 - 3.5P | C₁ = 5q₁ | C₂ = (1/2)q₂²" defaultOpen={true}>
       <h3 style={{ marginTop: 0, color: 'var(--color-accent-gold)' }}>Paso 1. Escribir la cantidad total</h3>
       <BlockMath math={`Q = q_1 + q_2`} />
 
@@ -17,32 +17,32 @@ export const Exercise1 = () => {
       <p>Como 3.5 = \frac{7}{2}, entonces dividir entre 3.5 es lo mismo que multiplicar por \frac{2}{7}:</p>
       <BlockMath math={`P = (150 - Q)(\frac{2}{7})\\
         P = \frac{300}{7} - \frac{2}{7}Q`} />
-      <p>Ahora sustituimos Q = q_1 + q_2:</p>
+      <p>Ahora sustituimos Q = q₁ + q₂:</p>
       <BlockMath math={`P = \frac{300}{7} - \frac{2}{7}(q_1 + q_2)`} />
       <p>Abrimos paréntesis:</p>
       <BlockMath math={`P = \frac{300}{7} - \frac{2}{7}q_1 - \frac{2}{7}q_2`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 3. Ganancia de la empresa 1</h3>
       <BlockMath math={`\pi_1 = P\cdot q_1 - C_1`} />
-      <p>Como C_1 = 5q_1:</p>
+      <p>Como C₁ = 5q_1:</p>
       <BlockMath math={`\pi_1 = P\cdot q_1 - 5q_1`} />
       <p>Sustituimos P:</p>
       <BlockMath math={`\pi_1 = [\frac{300}{7} - \frac{2}{7}q_1 - \frac{2}{7}q_2]q_1 - 5q_1`} />
-      <p>Multiplicamos q_1 en cada término:</p>
+      <p>Multiplicamos q₁ en cada término:</p>
       <BlockMath math={`\pi_1 = \frac{300}{7}q_1 - \frac{2}{7}q_1^2 - \frac{2}{7}q_1q_2 - 5q_1`} />
-      <p>Juntamos los términos que tienen q_1:</p>
+      <p>Juntamos los términos que tienen q₁:</p>
       <BlockMath math={`\frac{300}{7}q_1 - 5q_1 = \frac{300}{7}q_1 - \frac{35}{7}q_1 = \frac{265}{7}q_1`} />
       <p>Entonces:</p>
       <BlockMath math={`\pi_1 = \frac{265}{7}q_1 - \frac{2}{7}q_1^2 - \frac{2}{7}q_1q_2`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 4. Derivar la ganancia de la empresa 1</h3>
-      <p>Derivamos respecto a q_1:</p>
+      <p>Derivamos respecto a q₁:</p>
       <BlockMath math={`d\pi_1/dq_1 = \frac{265}{7} - \frac{4}{7}q_1 - \frac{2}{7}q_2`} />
       <p>Igualamos a cero:</p>
       <BlockMath math={`\frac{265}{7} - \frac{4}{7}q_1 - \frac{2}{7}q_2 = 0`} />
       <p>Multiplicamos todo por 7 para quitar denominadores:</p>
       <BlockMath math={`265 - 4q_1 - 2q_2 = 0`} />
-      <p>Despejamos q_1:</p>
+      <p>Despejamos q₁:</p>
       <BlockMath math={`4q_1 = 265 - 2q_2\\
         q_1 = (265 - 2q_2)/4\\
         q_1 = \frac{265}{4} - \frac{1}{2}q_2`} />
@@ -51,13 +51,13 @@ export const Exercise1 = () => {
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 5. Ganancia de la empresa 2</h3>
       <BlockMath math={`\pi_2 = P\cdot q_2 - C_2`} />
-      <p>Como C_2 = (1/2)q_2^2:</p>
+      <p>Como C₂ = (1/2)q₂^2:</p>
       <BlockMath math={`\pi_2 = P\cdot q_2 - \frac{1}{2}q_2^2`} />
       <p>Sustituimos P:</p>
       <BlockMath math={`\pi_2 = [\frac{300}{7} - \frac{2}{7}q_1 - \frac{2}{7}q_2]q_2 - \frac{1}{2}q_2^2`} />
-      <p>Multiplicamos q_2:</p>
+      <p>Multiplicamos q₂:</p>
       <BlockMath math={`\pi_2 = \frac{300}{7}q_2 - \frac{2}{7}q_1q_2 - \frac{2}{7}q_2^2 - \frac{1}{2}q_2^2`} />
-      <p>Juntamos los términos con q_2^2:</p>
+      <p>Juntamos los términos con q₂^2:</p>
       <BlockMath math={`-\frac{2}{7}q_2^2 - \frac{1}{2}q_2^2`} />
       <p>Buscamos denominador común 14:</p>
       <BlockMath math={`-\frac{4}{14}q_2^2 - \frac{7}{14}q_2^2 = -\frac{11}{14}q_2^2`} />
@@ -65,13 +65,13 @@ export const Exercise1 = () => {
       <BlockMath math={`\pi_2 = \frac{300}{7}q_2 - \frac{2}{7}q_1q_2 - \frac{11}{14}q_2^2`} />
 
       <h3 style={{ color: 'var(--color-accent-gold)' }}>Paso 6. Derivar la ganancia de la empresa 2</h3>
-      <p>Derivamos respecto a q_2:</p>
+      <p>Derivamos respecto a q₂:</p>
       <BlockMath math={`d\pi_2/dq_2 = \frac{300}{7} - \frac{2}{7}q_1 - \frac{11}{7}q_2`} />
       <p>Igualamos a cero:</p>
       <BlockMath math={`\frac{300}{7} - \frac{2}{7}q_1 - \frac{11}{7}q_2 = 0`} />
       <p>Multiplicamos todo por 7:</p>
       <BlockMath math={`300 - 2q_1 - 11q_2 = 0`} />
-      <p>Despejamos q_2:</p>
+      <p>Despejamos q₂:</p>
       <BlockMath math={`11q_2 = 300 - 2q_1\\
         q_2 = (300 - 2q_1)/11`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 2</h4>
@@ -81,13 +81,13 @@ export const Exercise1 = () => {
       <p>Tenemos:</p>
       <BlockMath math={`q_1 = \frac{265}{4} - q_2/2\\
         q_2 = (300 - 2q_1)/11`} />
-      <p>Sustituimos q_2 en la ecuación de q_1:</p>
+      <p>Sustituimos q₂ en la ecuación de q₁:</p>
       <BlockMath math={`q_1 = \frac{265}{4} - \frac{1}{2}[(300 - 2q_1)/11]\\
         q_1 = \frac{265}{4} - (300 - 2q_1)/22`} />
       <p>Separamos:</p>
       <BlockMath math={`q_1 = \frac{265}{4} - \frac{300}{22} + (2q_1)/22\\
         q_1 = \frac{265}{4} - \frac{150}{11} + q_1/11`} />
-      <p>Pasamos q_1/11 al lado izquierdo:</p>
+      <p>Pasamos q₁/11 al lado izquierdo:</p>
       <BlockMath math={`q_1 - q_1/11 = \frac{265}{4} - \frac{150}{11}`} />
       <p>Sacamos denominador común del lado izquierdo:</p>
       <BlockMath math={`(\frac{11}{11})q_1 - (\frac{1}{11})q_1 = (\frac{10}{11})q_1`} />
@@ -173,7 +173,7 @@ export const Exercise1 = () => {
       <div style={{ padding: '1.5rem', backgroundColor: 'var(--color-bg-academy)', borderRadius: '8px', borderLeft: '4px solid var(--color-text-main)' }}>
         <h3 style={{ marginTop: 0, color: 'var(--color-text-main)', fontSize: '1.2rem' }}>Interpretación sencilla 🌷</h3>
         <p style={{ margin: 0 }}>
-          La empresa 1 produce mucho más que la empresa 2. Eso pasa porque la empresa 1 tiene costo lineal de 5 por unidad, mientras que la empresa 2 tiene costo cuadrático. En palabras simples, a la empresa 2 le sale cada vez más caro producir mucho, por eso se frena antes. Por eso q_1 sale grande y q_2 sale más pequeño.
+          La empresa 1 produce mucho más que la empresa 2. Eso pasa porque la empresa 1 tiene costo lineal de 5 por unidad, mientras que la empresa 2 tiene costo cuadrático. En palabras simples, a la empresa 2 le sale cada vez más caro producir mucho, por eso se frena antes. Por eso q₁ sale grande y q₂ sale más pequeño.
         </p>
       </div>
     </Accordion>

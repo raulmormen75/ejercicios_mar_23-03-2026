@@ -4,7 +4,7 @@ import 'katex/dist/katex.min.css';
 
 export const Exercise3 = () => {
   return (
-    <Accordion title="3) Q = 120 - (1/2)P | C₁ = 7q₁ | C₂ = 3.5q₂^2" defaultOpen={false}>
+    <Accordion title="3) Q = 120 - (1/2)P | C₁ = 7q₁ | C₂ = 3.5q₂²" defaultOpen={false}>
       <h3 style={{ marginTop: 0, color: 'var(--color-accent-gold)' }}>Paso 1. Cantidad total</h3>
       <BlockMath math={`Q = q_1 + q_2`} />
 
@@ -14,7 +14,7 @@ export const Exercise3 = () => {
       <BlockMath math={`(\frac{1}{2})P = 120 - Q`} />
       <p>Multiplicamos todo por 2:</p>
       <BlockMath math={`P = 240 - 2Q`} />
-      <p>Sustituimos Q = q_1 + q_2:</p>
+      <p>Sustituimos Q = q₁ + q₂:</p>
       <BlockMath math={`P = 240 - 2(q_1 + q_2)`} />
       <p>Abrimos paréntesis:</p>
       <BlockMath math={`P = 240 - 2q_1 - 2q_2`} />
@@ -34,7 +34,7 @@ export const Exercise3 = () => {
       <BlockMath math={`d\pi_1/dq_1 = 233 - 4q_1 - 2q_2`} />
       <p>Igualamos a cero:</p>
       <BlockMath math={`233 - 4q_1 - 2q_2 = 0`} />
-      <p>Despejamos q_1:</p>
+      <p>Despejamos q₁:</p>
       <BlockMath math={`4q_1 = 233 - 2q_2\\
         q_1 = \frac{233}{4} - q_2/2`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 1</h4>
@@ -48,7 +48,7 @@ export const Exercise3 = () => {
       <BlockMath math={`\pi_2 = (240 - 2q_1 - 2q_2)q_2 - (\frac{7}{2})q_2^2`} />
       <p>Multiplicamos:</p>
       <BlockMath math={`\pi_2 = 240q_2 - 2q_1q_2 - 2q_2^2 - (\frac{7}{2})q_2^2`} />
-      <p>Juntamos los términos con q_2^2:</p>
+      <p>Juntamos los términos con q₂^2:</p>
       <BlockMath math={`-2q_2^2 - (\frac{7}{2})q_2^2`} />
       <BlockMath math={`-2q_2^2 = -(\frac{4}{2})q_2^2`} />
       <p>Entonces:</p>
@@ -60,7 +60,7 @@ export const Exercise3 = () => {
       <BlockMath math={`d\pi_2/dq_2 = 240 - 2q_1 - 11q_2`} />
       <p>Igualamos a cero:</p>
       <BlockMath math={`240 - 2q_1 - 11q_2 = 0`} />
-      <p>Despejamos q_2:</p>
+      <p>Despejamos q₂:</p>
       <BlockMath math={`11q_2 = 240 - 2q_1\\
         q_2 = (240 - 2q_1)/11`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 2</h4>
@@ -70,11 +70,11 @@ export const Exercise3 = () => {
       <p>Tenemos:</p>
       <BlockMath math={`q_1 = \frac{233}{4} - q_2/2\\
         q_2 = (240 - 2q_1)/11`} />
-      <p>Sustituimos q_2 en la ecuación de q_1:</p>
+      <p>Sustituimos q₂ en la ecuación de q₁:</p>
       <BlockMath math={`q_1 = \frac{233}{4} - (\frac{1}{2})[(240 - 2q_1)/11]\\
         q_1 = \frac{233}{4} - (240 - 2q_1)/22\\
         q_1 = \frac{233}{4} - \frac{120}{11} + q_1/11`} />
-      <p>Pasamos q_1/11 al lado izquierdo:</p>
+      <p>Pasamos q₁/11 al lado izquierdo:</p>
       <BlockMath math={`q_1 - q_1/11 = \frac{233}{4} - \frac{120}{11}`} />
       <p>Lado izquierdo:</p>
       <BlockMath math={`(\frac{10}{11})q_1`} />
@@ -92,7 +92,7 @@ export const Exercise3 = () => {
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Resultado de la empresa 1</h4>
       <BlockMath math={`q_1* = \frac{2083}{40} = 52.075`} />
 
-      <p>Ahora sustituimos en q_2:</p>
+      <p>Ahora sustituimos en q₂:</p>
       <BlockMath math={`q_2 = (240 - 2q_1)/11\\
         q_2 = [240 - 2(\frac{2083}{40})]/11\\
         q_2 = [240 - \frac{2083}{20}]/11`} />

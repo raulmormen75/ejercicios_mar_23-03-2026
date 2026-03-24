@@ -4,7 +4,7 @@ import 'katex/dist/katex.min.css';
 
 export const Exercise4 = () => {
   return (
-    <Accordion title="4.) Q = 50 - 2P | C₁ = 2q₁ | C₂ = 3.5q₂^2" defaultOpen={false}>
+    <Accordion title="4.) Q = 50 - 2P | C₁ = 2q₁ | C₂ = 3.5q₂²" defaultOpen={false}>
       <h3 style={{ marginTop: 0, color: 'var(--color-accent-gold)' }}>Paso 1. Cantidad total</h3>
       <BlockMath math={`Q = q_1 + q_2`} />
 
@@ -15,7 +15,7 @@ export const Exercise4 = () => {
         P = (50 - Q)/2`} />
       <p>Separamos:</p>
       <BlockMath math={`P = 25 - Q/2`} />
-      <p>Sustituimos Q = q_1 + q_2:</p>
+      <p>Sustituimos Q = q₁ + q₂:</p>
       <BlockMath math={`P = 25 - (q_1 + q_2)/2\\
         P = 25 - q_1/2 - q_2/2`} />
 
@@ -34,7 +34,7 @@ export const Exercise4 = () => {
       <BlockMath math={`d\pi_1/dq_1 = 23 - q_1 - q_2/2`} />
       <p>Igualamos a cero:</p>
       <BlockMath math={`23 - q_1 - q_2/2 = 0`} />
-      <p>Despejamos q_1:</p>
+      <p>Despejamos q₁:</p>
       <BlockMath math={`q_1 = 23 - q_2/2`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 1</h4>
       <BlockMath math={`R1(q_2) = q_1 = 23 - q_2/2`} />
@@ -45,7 +45,7 @@ export const Exercise4 = () => {
       <BlockMath math={`\pi_2 = (25 - q_1/2 - q_2/2)q_2 - 3.5q_2^2`} />
       <p>Multiplicamos:</p>
       <BlockMath math={`\pi_2 = 25q_2 - (\frac{1}{2})q_1q_2 - (\frac{1}{2})q_2^2 - 3.5q_2^2`} />
-      <p>Juntamos términos con q_2^2:</p>
+      <p>Juntamos términos con q₂^2:</p>
       <BlockMath math={`-(\frac{1}{2})q_2^2 - 3.5q_2^2`} />
       <p>Como 3.5 = 7/2:</p>
       <BlockMath math={`-(\frac{1}{2})q_2^2 - (\frac{7}{2})q_2^2 = -(\frac{8}{2})q_2^2 = -4q_2^2`} />
@@ -58,7 +58,7 @@ export const Exercise4 = () => {
       <BlockMath math={`25 - q_1/2 - 8q_2 = 0`} />
       <p>Multiplicamos todo por 2:</p>
       <BlockMath math={`50 - q_1 - 16q_2 = 0`} />
-      <p>Despejamos q_2:</p>
+      <p>Despejamos q₂:</p>
       <BlockMath math={`16q_2 = 50 - q_1\\
         q_2 = (50 - q_1)/16`} />
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Función de reacción de la empresa 2</h4>
@@ -68,12 +68,12 @@ export const Exercise4 = () => {
       <p>Tenemos:</p>
       <BlockMath math={`q_1 = 23 - q_2/2\\
         q_2 = (50 - q_1)/16`} />
-      <p>Sustituimos q_2 en q_1:</p>
+      <p>Sustituimos q₂ en q₁:</p>
       <BlockMath math={`q_1 = 23 - (\frac{1}{2})[(50 - q_1)/16]\\
         q_1 = 23 - (50 - q_1)/32\\
         q_1 = 23 - \frac{50}{32} + q_1/32\\
         q_1 = 23 - \frac{25}{16} + q_1/32`} />
-      <p>Pasamos q_1/32 al lado izquierdo:</p>
+      <p>Pasamos q₁/32 al lado izquierdo:</p>
       <BlockMath math={`q_1 - q_1/32 = 23 - \frac{25}{16}`} />
       <p>Lado izquierdo:</p>
       <BlockMath math={`(\frac{31}{32})q_1`} />
@@ -89,7 +89,7 @@ export const Exercise4 = () => {
       <h4 style={{ color: 'var(--color-accent-gold)' }}>Resultado de la empresa 1</h4>
       <BlockMath math={`q_1* = \frac{686}{31} ≈ 22.1290`} />
 
-      <p>Ahora sustituimos en q_2:</p>
+      <p>Ahora sustituimos en q₂:</p>
       <BlockMath math={`q_2 = (50 - q_1)/16\\
         q_2 = [50 - (\frac{686}{31})]/16`} />
       <BlockMath math={`50 = \frac{1550}{31}`} />
